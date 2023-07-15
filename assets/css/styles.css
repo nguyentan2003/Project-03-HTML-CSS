@@ -13,7 +13,8 @@ body {
 }
 
 :root {
-    --pramary-color: #2e80ce;
+    --first-color: #10375c;
+    --second-color: #2e80ce;
     --color-xam: #c9d2da;
 }
 
@@ -37,7 +38,7 @@ a {
     display: inline-block;
     min-width: 104px;
     line-height: 44px;
-    background-color: var(--pramary-color);
+    background-color: var(--second-color);
     border-radius: 999px;
     color: #fff;
     font-weight: 400;
@@ -49,11 +50,12 @@ a {
 /*  ======== HEADER ======= */
 .header {
     min-width: 100vw;
-    background: #10375c;
+    background: var(--first-color);
     padding-top: 30px;
     padding-bottom: 8px;
     position: sticky;
     top: -22px;
+    z-index: 1;
 }
 
 .header__container {
@@ -81,7 +83,7 @@ a {
 .logo__text::before {
     width: 3em;
     height: 3em;
-    background-color: var(--pramary-color);
+    background-color: var(--second-color);
     bottom: 0;
     left: -3.6em;
 }
@@ -118,16 +120,21 @@ a {
     font-family: Sora;
     font-size: 1.6rem;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 300;
     line-height: 2.8rem;
 }
 
 .header__navbar ul a:hover {
+    text-shadow: 1px 0 0 #fff;
     color: #fff;
 }
 .header__navbar ul .active {
+    font-weight: 600;
     position: relative;
     color: #fff;
+}
+.header__navbar ul .active:hover {
+    text-shadow: none;
 }
 .header__navbar ul .active::before {
     position: absolute;
@@ -149,8 +156,8 @@ a {
 
 /*  ========= HERO ============ */
 .hero {
-    background-color: #10375c;
-    padding-top: 76px;
+    background-color: var(--first-color);
+    padding-top: 68px;
     padding-bottom: 110px;
     min-width: 100vw;
 }
@@ -212,4 +219,98 @@ a {
     width: 210px;
     height: 410px;
     border-radius: 0px 6px 6px 0px;
+}
+
+/* ======= SERVICE ======= */
+.service {
+    padding: 170px 0;
+}
+.service__title {
+    color: var(--first-color);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem; /* 120% */
+    letter-spacing: -0.1rem;
+    margin-bottom: 18px;
+}
+
+.service__desc {
+    margin: 0 auto 70px;
+    width: 468px;
+    color: #575f66;
+    text-align: center;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 3rem;
+}
+
+.service__main {
+    display: flex;
+}
+.service__figure {
+    width: 570px;
+    height: 570px;
+    border-radius: 12px;
+    margin-right: 130px;
+}
+
+.main__service__advice {
+    display: grid;
+    grid-template-columns: 470px;
+    grid-template-rows: repeat(3, 128px);
+    margin-bottom: 55px;
+}
+.service__row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #fff;
+    cursor: pointer;
+    padding-left: 22px;
+}
+.service__row:hover {
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-xam);
+}
+.service__row:hover .service__icon {
+    background-color: var(--second-color);
+}
+.service__icon {
+    width: 83px;
+    height: 60px;
+    border-radius: 50%;
+    display: grid;
+    background-color: #eff6fd;
+    margin-right: 19px;
+}
+/* teeth */
+.fa-solid.fa-tooth {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: var(--first-color);
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+.service__row--title {
+    color: var(--first-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: normal;
+}
+.service__row--desc {
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem; /* 175% */
+}
+
+.service--btn {
+    min-width: 205px;
+    line-height: 60px;
 }
