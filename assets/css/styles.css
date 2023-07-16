@@ -9,7 +9,6 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
-    height: 5000px;
 }
 
 :root {
@@ -722,4 +721,53 @@ a {
 .news__learn-more:hover {
     color: var(--second-color);
     text-decoration: underline;
+}
+
+/* =========== Welcom ======== */
+.welcom {
+    padding: 85px 0 170px;
+}
+
+.welcom__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0;
+    background: #f6fbff;
+}
+
+.welcom__title {
+    color: var(--first-color);
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 6rem;
+    letter-spacing: -1px;
+    margin-bottom: 38px;
+    position: relative;
+}
+.welcom__title::after {
+    content: "";
+    display: block;
+    width: 136px;
+    height: 2px;
+    background: var(--second-color);
+    position: absolute;
+    bottom: -18px;
+    left: calc(813px / 2 - 136px / 2);
+}
+.welcom__desc {
+    color: #575f66;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 2.8rem;
+    margin-bottom: 38px;
+    width: 617px;
+    --line-clamp: 4;
+}
+
+.welcom__btn {
+    min-width: 205px;
+    line-height: 60px;
 }
